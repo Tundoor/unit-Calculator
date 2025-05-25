@@ -60,3 +60,47 @@
 // 0°C × 9/5 + 32 = 32°F
 
 // 25°C × 9/5 + 32 = 77°F
+
+const lengthDiv = document.getElementById('length-div')
+const volumeDiv = document.getElementById('volume-div')
+const massDiv = document.getElementById('mass-div')
+const tempDiv = document.getElementById('temp-div')
+const userInput = document.getElementById('user-input')
+const submit = document.getElementById('submit')
+
+const calc = {
+    toInches : (num) => {
+        return num *  0.3937
+    },
+
+    toFeet : (num) => {
+        return num * 3.2808
+    },
+     
+    toYards : (num) => {
+        return num * 1.0936
+    },
+
+    toMiles : (num) => {
+        return num * 1.0936 },
+
+}
+
+
+// paragrapgh Logic
+function updateParagraph ( displayStr, div) {
+    let el = document.createElement('p');
+    el.textContent = displayStr
+    div.append(el)
+}
+
+//Click logic
+submit.addEventListener( 'click', () => {
+    let num = userInput.value
+    let str = `The input Is ${num}`
+    updateParagraph(str, lengthDiv)
+    console.log(lengthDiv)
+    userInput.value = ""
+})
+
+

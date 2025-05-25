@@ -85,16 +85,19 @@ main {
 .measurement-div {
     background-color:#065F46 ;
     width: 700px;
-    height: 120px;
+    height: 90px;
     text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .measurement-div h1 {
     color: #A7F3D0;
-    margin-top: 20px;
+    font-size: 1.8rem;
 }
 
 .measurement-div p {
     color: white;
-    margin-top: 10px;
 }
